@@ -1,4 +1,5 @@
-0. Előkészületek
+0. Előkészületek:
+
 	1. Sox telepítése:
 	
 		pi@raspberrypi:~$ sudo apt-get install python-pyaudio python3-pyaudio sox
