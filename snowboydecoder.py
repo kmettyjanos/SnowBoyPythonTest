@@ -32,7 +32,13 @@ class RingBuffer(object):
         tmp = bytes(bytearray(self._buf))
         self._buf.clear()
         return tmp
-
+def TurnOn():
+    os.system('sudo vcgencmd display_power 1')
+    return 0
+    
+def TurnOff():
+    os.system('sudo vcgencmd display_power 0')
+    return 0
 
 def play_audio_file(fname=DETECT_DING):
     """Simple callback function to play a wave file. By default it plays
