@@ -32,6 +32,15 @@ class RingBuffer(object):
         tmp = bytes(bytearray(self._buf))
         self._buf.clear()
         return tmp
+def TurnOff():
+    os.system("sudo vcgencmd display_power 0")
+#    os.system("sudo su pi -c 'xset -display :0.0 dpms force off'")
+    return 0
+
+def TurnOn():
+    os.system("sudo vcgencmd display_power 1")
+ #   os.system("sudo su pi -c 'xset -display :0.0 dpms force on'")
+    return 0
 
 
 def play_audio_file(fname=DETECT_DING):
